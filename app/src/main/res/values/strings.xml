@@ -1,0 +1,143 @@
+<resources>
+<string name="app_name">Smart Routine</string>
+
+<string-array name="Main">
+    <item> Schedule </item>
+    <item> Subjects </item>
+    <item> Faculty </item>
+    <item> Resources </item>
+</string-array>
+
+<string-array name="Description">
+    <item> About </item>
+    <item> About </item>
+    <item> About </item>
+    <item> About </item>
+</string-array>
+
+<string-array name="Week">
+    <item> Monday </item>
+    <item> Tuesday </item>
+    <item> Wednesday </item>
+    <item> Thursday </item>
+    <item> Friday </item>
+    <item> Saturday </item>
+</string-array>
+
+<string-array name="Monday">
+    <item>Digital signal processing</item>
+    <item>Digital image processing</item>
+    <item>Break</item>
+    <item>Digital signal processing Lab</item>
+    <item>Launch Break</item>
+    <item>VLSI Design Lab</item>
+</string-array>
+
+<string-array name="Tuesday">
+    <item>Digital signal processing</item>
+    <item>Digital image processing</item>
+    <item>Break</item>
+    <item>Digital signal processing Lab</item>
+    <item>Launch Break</item>
+    <item>VLSI Design Lab</item>
+</string-array>
+
+<string-array name="Wednesday">
+    <item>Digital signal processing</item>
+    <item>Digital image processing</item>
+    <item>Break</item>
+    <item>Digital signal processing Lab</item>
+    <item>Launch Break</item>
+    <item>VLSI Design Lab</item>
+</string-array>
+
+<string-array name="Thursday">
+   <item>Off Day</item>
+</string-array>
+
+<string-array name="Friday">
+    <item>Off Day</item>
+</string-array>
+
+<string-array name="Saturday">
+    <item>Digital signal processing</item>
+    <item>Digital image processing</item>
+    <item>Break</item>
+    <item>Digital signal processing Lab</item>
+    <item>Launch Break</item>
+    <item>VLSI Design Lab</item>
+</string-array>
+
+<string-array name="time1">
+    <item>8:55AM - 9:50AM</item>
+    <item>9:50AM - 10:45AM</item>
+    <item>10:45AM - 11:15AM</item>
+    <item>11:15AM - 1:05PM</item>
+    <item>1:05PM - 2:00PM</item>
+    <item>2:00PM - 2:55PM</item>
+    <item>2:55PM - 4:45PM</item>
+</string-array>
+
+<string-array name="time2">
+    <item>8:55AM - 9:50AM</item>
+    <item>9:50AM - 10:45AM</item>
+    <item>10:45AM - 11:15AM</item>
+    <item>11:15AM - 12:10PM</item>
+    <item>12:10PM - 1:05PM</item>
+    <item>1:05PM - 2:00PM</item>
+    <item>2:00PM - 3:50PM</item>
+</string-array>
+
+<string-array name="time3">
+    <item>8:55AM - 9:50AM</item>
+    <item>9:50AM - 10:45AM</item>
+    <item>10:45AM - 11:15AM</item>
+    <item>11:15AM - 12:10PM</item>
+    <item>12:10PM - 1:05PM</item>
+    <item>1:05PM - 2:00PM</item>
+    <item>2:00PM - 3:50PM</item>
+</string-array>
+
+<string-array name="time4">
+    <item>8:55AM - 9:50AM</item>
+    <item>9:50AM - 10:45AM</item>
+    <item>10:45AM - 11:15AM</item>
+    <item>11:15AM - 12:10PM</item>
+    <item>12:10PM - 1:05PM</item>
+    <item>1:05PM - 2:00PM</item>
+    <item>2:00PM - 3:50PM</item>
+</string-array>
+
+<string-array name="time5">
+    <item>8:55AM - 10:45AM</item>
+    <item>10:45AM - 11:15AM</item>
+    <item>11:15AM - 12:10PM</item>
+    <item>12:10PM - 1:05PM</item>
+    <item>1:05PM - 2:00PM</item>
+    <item>2:00PM - 3:50PM</item>
+</string-array>
+
+<string-array name="time6">
+    <item>8:55AM - 10:45AM</item>
+    <item>10:45AM - 11:15AM</item>
+    <item>11:15AM - 1:05PM</item>
+</string-array>
+
+
+
+    <string-array name="Faculty">
+        <item> Shuvo </item>
+        <item> Musa </item>
+    </string-array>
+
+    <string-array name="MHR">
+        <item>Associate Professor</item>
+        <item>Machine Learning</item>
+    </string-array>
+
+    <string-array name="Msa">
+        <item>Associate Professor</item>
+        <item>Neural Network</item>
+    </string-array>
+</resources>
+
