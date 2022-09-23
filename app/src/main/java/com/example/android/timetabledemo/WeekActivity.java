@@ -17,7 +17,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.android.timetabledemo.Session.SessionManagement;
 import com.example.android.timetabledemo.Utils.LetterImageView;
+import com.example.android.timetabledemo.pojo.User;
 
 import java.util.Objects;
 
@@ -35,6 +37,7 @@ public class WeekActivity extends AppCompatActivity {
 
         setupUIViews();
         initToolbar();
+        setAuthUser();
 
         setupListView();
     }
@@ -89,6 +92,11 @@ public class WeekActivity extends AppCompatActivity {
                     sharedPreferences.edit().putString(SEL_DAY, "Saturday").apply();
                     break;
                 }
+                case 6: {
+                    startActivity(new Intent(WeekActivity.this, DayDetail.class));
+                    sharedPreferences.edit().putString(SEL_DAY, "Sunday").apply();
+                    break;
+                }
                 default:break;
             }
         });
@@ -132,6 +140,17 @@ public class WeekActivity extends AppCompatActivity {
             private LetterImageView ivLogo;
             private TextView tvWeek;
         }
+    }
+
+    private void setAuthUser () {
+        TextView authFullNameTextView = (TextView) findViewById(R.id.authFullName);
+        TextView authUsernameTextView = (TextView) findViewById(R.id.authUsername);
+
+        SessionManagement sessionManagement = new SessionManagement(WeekActivity.this);
+        User user = sessionManagement.getSession();
+
+        authFullNameTextView.setText("NAME: " + user.getFullName());
+        authUsernameTextView.setText("USERNAME: " + user.getUsername());
     }
 
     @Override

@@ -13,7 +13,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.android.timetabledemo.Session.SessionManagement;
 import com.example.android.timetabledemo.Utils.LetterImageView;
+import com.example.android.timetabledemo.pojo.User;
 
 
 public class DayDetail extends AppCompatActivity {
@@ -24,6 +26,7 @@ public class DayDetail extends AppCompatActivity {
     public static String[] Wednesday;
     public static String[] Thursday;
     public static String[] Friday;
+    public static String[] Sunday;
     public static String[] Saturday;
     public static String[] Time1;
     public static String[] Time2;
@@ -31,10 +34,10 @@ public class DayDetail extends AppCompatActivity {
     public static String[] Time4;
     public static String[] Time5;
     public static String[] Time6;
+    public static String[] Time7;
     private String[] PreferredDay;
     private String[] PreferredTime;
     private Toolbar toolbar;
-    private String[] Sunday;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,7 @@ public class DayDetail extends AppCompatActivity {
         setupUIViews();
         initToolbar();
         setupListView();
+        setAuthUser();
     }
 
     private void setupUIViews(){
@@ -64,6 +68,7 @@ public class DayDetail extends AppCompatActivity {
         Thursday = getResources().getStringArray(R.array.Thursday);
         Friday = getResources().getStringArray(R.array.Friday);
         Saturday = getResources().getStringArray(R.array.Saturday);
+        Sunday = getResources().getStringArray(R.array.Saturday);
 
         Time1 = getResources().getStringArray(R.array.time1);
         Time2 = getResources().getStringArray(R.array.time2);
@@ -71,6 +76,7 @@ public class DayDetail extends AppCompatActivity {
         Time4 = getResources().getStringArray(R.array.time4);
         Time5 = getResources().getStringArray(R.array.time5);
         Time6 = getResources().getStringArray(R.array.time6);
+        Time7 = getResources().getStringArray(R.array.time6);
 
         String selected_day = WeekActivity.sharedPreferences.getString(WeekActivity.SEL_DAY, null);
 
@@ -89,14 +95,17 @@ public class DayDetail extends AppCompatActivity {
         }else if(selected_day.equalsIgnoreCase("Friday")){
             PreferredDay = Friday;
             PreferredTime = Time5;
-        }else{
+        }else if(selected_day.equalsIgnoreCase("Saturday")){
             PreferredDay = Saturday;
             PreferredTime = Time6;
+        }
+        else{
+            PreferredDay = Sunday;
+            PreferredTime = Time7;
         }
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(DayDetail.this, PreferredDay, PreferredTime);
         listView.setAdapter(simpleAdapter);
-
     }
 
     public class SimpleAdapter extends BaseAdapter {
@@ -150,6 +159,17 @@ public class DayDetail extends AppCompatActivity {
             return convertView;
 
         }
+    }
+
+    private void setAuthUser () {
+        TextView authFullNameTextView = (TextView) findViewById(R.id.authFullName);
+        TextView authUsernameTextView = (TextView) findViewById(R.id.authUsername);
+
+        SessionManagement sessionManagement = new SessionManagement(DayDetail.this);
+        User user = sessionManagement.getSession();
+
+        authFullNameTextView.setText("NAME: " + user.getFullName());
+        authUsernameTextView.setText("USERNAME: " + user.getUsername());
     }
 
     @Override

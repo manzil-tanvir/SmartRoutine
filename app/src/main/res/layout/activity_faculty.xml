@@ -11,7 +11,33 @@
         android:layout_height="?android:attr/actionBarSize"
         android:background="@color/colorPrimary"
         app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
         android:id="@+id/ToolbarFaculty">
+
+        <LinearLayout
+            android:id="@+id/userTitleSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DF6944"
+            android:padding="20px"
+            android:layout_below="@+id/ToolbarFaculty"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/authFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/authUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 

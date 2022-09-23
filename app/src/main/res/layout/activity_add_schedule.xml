@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.timetabledemo.AddScheduleActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        android:id="@+id/ToolbarAddSchedule">
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/userTitleSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DF6944"
+        android:padding="20px"
+        android:layout_below="@+id/ToolbarAddSchedule"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/authFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/authUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userTitleSection"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#D4DFDF"
+        android:drawablePadding="20dp"
+        android:hint="Course (Eg. Programming Fundamentals)"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+    <EditText
+        android:id="@+id/semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/course"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#D4DFDF"
+        android:drawablePadding="20dp"
+        android:hint="Semester (Eg. 5th)"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weekDay"
+        android:layout_below="@id/semester"
+        android:background="#D4DFDF"
+        android:hint="Week Day (Eg. Saturday)"
+        android:textColorHint="@android:color/black"
+        android:textColor="@android:color/black"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:drawablePadding="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startTime"
+        android:layout_below="@id/weekDay"
+        android:background="#D4DFDF"
+        android:hint="Start Time (Eg. 8:00AM)"
+        android:textColorHint="@android:color/black"
+        android:textColor="@android:color/black"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:drawablePadding="20dp"
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/endTime"
+        android:layout_below="@id/startTime"
+        android:background="#D4DFDF"
+        android:hint="End Time (Eg. 9:00AM)"
+        android:textColorHint="@android:color/black"
+        android:textColor="@android:color/black"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:drawablePadding="20dp"
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/roomNo"
+        android:layout_below="@id/endTime"
+        android:background="#D4DFDF"
+        android:hint="Room No (Eg. 201)"
+        android:textColorHint="@android:color/black"
+        android:textColor="@android:color/black"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:drawablePadding="20dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addScheduleSubmitBtn"
+        android:layout_below="@id/roomNo"
+        android:text="ADD"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:height="60dp"
+    />
+</RelativeLayout>
